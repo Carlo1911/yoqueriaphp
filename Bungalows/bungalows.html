@@ -39,6 +39,7 @@
         <!-- Page JS Plugins CSS -->
         <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css">
         <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css">
+        <link rel="stylesheet" href="assets/js/plugins/datatables/jquery.dataTables.min.css">
 
         <!-- Bootstrap and OneUI CSS framework -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -81,7 +82,7 @@
                         </button>
                         <span>
                             <img class="img-avatar img-avatar32" src="assets/img/avatars/avatar10.jpg" alt="">
-                            <span class="font-w600 push-10-l">Keith Simpson</span>
+                            <span class="font-w600 push-10-l">Carlo Alva</span>
                         </span>
                     </div>
                     <!-- END Side Header -->
@@ -526,8 +527,6 @@
                                         <li>
                                             <a href="javascript:void(0)">Ver multas</a>
                                         </li>
-                                        
-
                                     </ul>
                                 </li>                                                               
                                 
@@ -623,7 +622,7 @@
                     <li class="js-header-search header-search">
                         <form class="form-horizontal" action="base_pages_search.html" method="post">
                             <div class="form-material form-material-primary input-group remove-margin-t remove-margin-b">
-                                <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="Search..">
+                                <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="Buscar..">
                                 <span class="input-group-addon"><i class="si si-magnifier"></i></span>
                             </div>
                         </form>
@@ -641,483 +640,613 @@
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
-                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrator</h2>
+                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
+                    </div>
+                </div>
+
+
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Bungalows <small>Lista completa de bungalows</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Bungalows</li>
+                                <li><a class="link-effect" href="">Lista de bungalows</a></li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 <!-- END Page Header -->
 
-                <!-- Stats -->
-                <div class="content bg-white border-b">
-                    <div class="row items-push text-uppercase">
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Product Sales</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> Today</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">300</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Product Sales</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> This Month</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">8,790</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Total Earnings</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> All Time</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">$ 93,880</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Average Sale</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> All Time</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">$ 270</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- END Stats -->
-
                 <!-- Page Content -->
                 <div class="content">
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <!-- Main Dashboard Chart -->
-                            <div class="block">
-                                <div class="block-header">
-                                    <ul class="block-options">
-                                        <li>
-                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                                        </li>
-                                    </ul>
-                                    <h3 class="block-title">Weekly Overview</h3>
-                                </div>
-                                <div class="block-content block-content-full bg-gray-lighter text-center">
-                                    <!-- Chart.js Charts (initialized in js/pages/base_pages_dashboard.js), for more examples you can check out http://www.chartjs.org/docs/ -->
-                                    <div style="height: 374px;"><canvas class="js-dash-chartjs-lines"></canvas></div>
-                                </div>
-                                <div class="block-content text-center">
-                                    <div class="row items-push text-center">
-                                        <div class="col-xs-6 col-lg-3">
-                                            <div class="push-10"><i class="si si-graph fa-2x"></i></div>
-                                            <div class="h5 font-w300 text-muted">+ 205 Sales</div>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-3">
-                                            <div class="push-10"><i class="si si-users fa-2x"></i></div>
-                                            <div class="h5 font-w300 text-muted">+ 25% Clients</div>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-3 visible-lg">
-                                            <div class="push-10"><i class="si si-star fa-2x"></i></div>
-                                            <div class="h5 font-w300 text-muted">+ 10 Ratings</div>
-                                        </div>
-                                        <div class="col-xs-6 col-lg-3 visible-lg">
-                                            <div class="push-10"><i class="si si-share fa-2x"></i></div>
-                                            <div class="h5 font-w300 text-muted">+ 35 Followers</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Main Dashboard Chart -->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- Latest Sales Widget -->
-                            <div class="block">
-                                <div class="block-header">
-                                    <ul class="block-options">
-                                        <li>
-                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                                        </li>
-                                    </ul>
-                                    <h3 class="block-title">Latest Sales</h3>
-                                </div>
-                                <div class="block-content bg-gray-lighter">
-                                    <div class="row items-push">
-                                        <div class="col-xs-4">
-                                            <div class="text-muted"><small><i class="si si-calendar"></i> 24 hrs</small></div>
-                                            <div class="font-w600">18 Sales</div>
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <div class="text-muted"><small><i class="si si-calendar"></i> 7 days</small></div>
-                                            <div class="font-w600">78 Sales</div>
-                                        </div>
-                                        <div class="col-xs-4 h1 font-w300 text-right">$769</div>
-                                    </div>
-                                </div>
-                                <div class="block-content">
-                                    <div class="pull-t pull-r-l">
-                                        <!-- Slick slider (.js-slider class is initialized in App() -> uiHelperSlick()) -->
-                                        <!-- For more info and examples you can check out http://kenwheeler.github.io/slick/ -->
-                                        <div class="js-slider remove-margin-b" data-slider-autoplay="true" data-slider-autoplay-speed="2500">
-                                            <div>
-                                                <table class="table remove-margin-b font-s13">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="font-w600">
-                                                                <a href="javascript:void(0)">Admin Template</a>
-                                                            </td>
-                                                            <td class="hidden-xs text-muted text-right" style="width: 70px;">23:01</td>
-                                                            <td class="font-w600 text-success text-right" style="width: 70px;">+ $21</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">22:15</td>
-                                                            <td class="font-w600 text-success text-right">+ $52</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">HTML Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">22:01</td>
-                                                            <td class="font-w600 text-success text-right">+ $16</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">21:45</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">21:15</td>
-                                                            <td class="font-w600 text-success text-right">+ $48</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">20:11</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">20:01</td>
-                                                            <td class="font-w600 text-success text-right">+ $50</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">HTML Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">19:35</td>
-                                                            <td class="font-w600 text-success text-right">+ $16</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">19:17</td>
-                                                            <td class="font-w600 text-success text-right">+ $60</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">17:49</td>
-                                                            <td class="font-w600 text-success text-right">+ $59</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                    <!-- Simple Table Full -->
+                    <div class="block">
+                        <!--<div class="block-header">
+                            <h3 class="block-title">Simple Table <small>Full</small></h3>
+                        </div>-->
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table class="table table-bordered table-striped js-dataTable-simple">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"></th>
+                                        <th>Bungalow</th>
+                                        <th class="hidden-xs">Capacidad</th>
+                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
+                                        <th class="text-center" style="width: 10%;">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="font-w600">Bungalow 101</td>
+                                        <td class="hidden-xs">4 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Ocupado</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
                                             </div>
-                                            <div>
-                                                <table class="table remove-margin-b font-s13">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="font-w600">
-                                                                <a href="javascript:void(0)">Admin Template</a>
-                                                            </td>
-                                                            <td class="hidden-xs text-muted text-right" style="width: 70px;">16:10</td>
-                                                            <td class="font-w600 text-success text-right" style="width: 70px;">+ $21</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">16:06</td>
-                                                            <td class="font-w600 text-success text-right">+ $48</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">15:21</td>
-                                                            <td class="font-w600 text-success text-right">+ $52</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">12:10</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">12:09</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">HTML Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">11:39</td>
-                                                            <td class="font-w600 text-success text-right">+ $16</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">11:33</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">Admin Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">11:18</td>
-                                                            <td class="font-w600 text-success text-right">+ $23</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">WP Theme</a></td>
-                                                            <td class="hidden-xs text-muted text-right">09:49</td>
-                                                            <td class="font-w600 text-success text-right">+ $50</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="font-w600"><a href="javascript:void(0)">HTML Template</a></td>
-                                                            <td class="hidden-xs text-muted text-right">09:35</td>
-                                                            <td class="font-w600 text-success text-right">+ $16</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="font-w600">Bungalow 102</td>
+                                        <td class="hidden-xs">4 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Reservado</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
                                             </div>
-                                        </div>
-                                        <!-- END Slick slider -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Latest Sales Widget -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="font-w600">Bungalow 103</td>
+                                        <td class="hidden-xs">6 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">Disponible</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td class="font-w600">Julia Cole</td>
+                                        <td class="hidden-xs">client4@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">5</td>
+                                        <td class="font-w600">Laura Bell</td>
+                                        <td class="hidden-xs">client5@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">6</td>
+                                        <td class="font-w600">John Parker</td>
+                                        <td class="hidden-xs">client6@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-info">Business</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">7</td>
+                                        <td class="font-w600">Lisa Gordon</td>
+                                        <td class="hidden-xs">client7@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">8</td>
+                                        <td class="font-w600">Scott Ruiz</td>
+                                        <td class="hidden-xs">client8@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">9</td>
+                                        <td class="font-w600">Dennis Ross</td>
+                                        <td class="hidden-xs">client9@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td class="font-w600">Roger Hart</td>
+                                        <td class="hidden-xs">client10@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Disabled</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">11</td>
+                                        <td class="font-w600">Donald Barnes</td>
+                                        <td class="hidden-xs">client11@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">12</td>
+                                        <td class="font-w600">Scott Ruiz</td>
+                                        <td class="hidden-xs">client12@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">13</td>
+                                        <td class="font-w600">Vincent Sims</td>
+                                        <td class="hidden-xs">client13@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">14</td>
+                                        <td class="font-w600">Keith Simpson</td>
+                                        <td class="hidden-xs">client14@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">15</td>
+                                        <td class="font-w600">Scott Ruiz</td>
+                                        <td class="hidden-xs">client15@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">16</td>
+                                        <td class="font-w600">Vincent Sims</td>
+                                        <td class="hidden-xs">client16@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">17</td>
+                                        <td class="font-w600">Sara Holland</td>
+                                        <td class="hidden-xs">client17@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">18</td>
+                                        <td class="font-w600">Rebecca Gray</td>
+                                        <td class="hidden-xs">client18@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Disabled</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">19</td>
+                                        <td class="font-w600">Craig Stone</td>
+                                        <td class="hidden-xs">client19@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">20</td>
+                                        <td class="font-w600">Denise Watson</td>
+                                        <td class="hidden-xs">client20@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">21</td>
+                                        <td class="font-w600">Ethan Howard</td>
+                                        <td class="hidden-xs">client21@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Disabled</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">22</td>
+                                        <td class="font-w600">Denise Watson</td>
+                                        <td class="hidden-xs">client22@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-info">Business</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">23</td>
+                                        <td class="font-w600">Evelyn Willis</td>
+                                        <td class="hidden-xs">client23@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-info">Business</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">24</td>
+                                        <td class="font-w600">Ethan Howard</td>
+                                        <td class="hidden-xs">client24@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">25</td>
+                                        <td class="font-w600">George Stone</td>
+                                        <td class="hidden-xs">client25@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">26</td>
+                                        <td class="font-w600">Jack Greene</td>
+                                        <td class="hidden-xs">client26@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">27</td>
+                                        <td class="font-w600">Amber Walker</td>
+                                        <td class="hidden-xs">client27@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">28</td>
+                                        <td class="font-w600">Ethan Howard</td>
+                                        <td class="hidden-xs">client28@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">29</td>
+                                        <td class="font-w600">Craig Stone</td>
+                                        <td class="hidden-xs">client29@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">30</td>
+                                        <td class="font-w600">Jack Greene</td>
+                                        <td class="hidden-xs">client30@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-info">Business</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">31</td>
+                                        <td class="font-w600">Ryan Hall</td>
+                                        <td class="hidden-xs">client31@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">32</td>
+                                        <td class="font-w600">Amber Walker</td>
+                                        <td class="hidden-xs">client32@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">33</td>
+                                        <td class="font-w600">Evelyn Willis</td>
+                                        <td class="hidden-xs">client33@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">34</td>
+                                        <td class="font-w600">Laura Bell</td>
+                                        <td class="hidden-xs">client34@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">35</td>
+                                        <td class="font-w600">Evelyn Willis</td>
+                                        <td class="hidden-xs">client35@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">36</td>
+                                        <td class="font-w600">Susan Elliott</td>
+                                        <td class="hidden-xs">client36@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Disabled</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">37</td>
+                                        <td class="font-w600">Ethan Howard</td>
+                                        <td class="hidden-xs">client37@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">VIP</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">38</td>
+                                        <td class="font-w600">Rebecca Reid</td>
+                                        <td class="hidden-xs">client38@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">39</td>
+                                        <td class="font-w600">Ryan Hall</td>
+                                        <td class="hidden-xs">client39@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-primary">Personal</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">40</td>
+                                        <td class="font-w600">Ann Parker</td>
+                                        <td class="hidden-xs">client40@example.com</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Trial</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-8">
-                            <!-- News -->
-                            <div class="block">
-                                <div class="block-header">
-                                    <ul class="block-options">
-                                        <li>
-                                            <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                                        </li>
-                                    </ul>
-                                    <h3 class="block-title"> Updates</h3>
-                                </div>
-                                <div class="block-content bg-gray-lighter">
-                                    <!-- Slick slider (.js-slider class is initialized in App() -> uiHelperSlick()) -->
-                                    <!-- For more info and examples you can check out http://kenwheeler.github.io/slick/ -->
-                                    <div class="js-slider remove-margin-b" data-slider-autoplay="true" data-slider-autoplay-speed="4000">
-                                        <div>
-                                            <blockquote>
-                                                <p>Be yourself; everyone else is already taken.</p>
-                                                <footer>Oscar Wilde</footer>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p>Don't cry because it's over, smile because it happened.</p>
-                                                <footer>Dr. Seuss</footer>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p>Strive not to be a success, but rather to be of value.</p>
-                                                <footer>Albert Einstein</footer>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p>Every child is an artist. The problem is how to remain an artist once he grows up.</p>
-                                                <footer>Pablo Picasso</footer>
-                                            </blockquote>
-                                        </div>
-                                        <div>
-                                            <blockquote>
-                                                <p>There is only one way to avoid criticism: do nothing, say nothing, and be nothing.</p>
-                                                <footer>Aristotle</footer>
-                                            </blockquote>
-                                        </div>
-                                    </div>
-                                    <!-- END Slick slider -->
-                                </div>
-                                <div class="block-content">
-                                    <ul class="list list-timeline pull-t">
-                                        <!-- Twitter Notification -->
-                                        <li>
-                                            <div class="list-timeline-time">12 hrs ago</div>
-                                            <i class="fa fa-twitter list-timeline-icon bg-info"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">+ 1150 Followers</p>
-                                                <p class="font-s13">You’re getting more and more followers, keep it up!</p>
-                                            </div>
-                                        </li>
-                                        <!-- END Twitter Notification -->
-
-                                        <!-- Generic Notification -->
-                                        <li>
-                                            <div class="list-timeline-time">4 hrs ago</div>
-                                            <i class="fa fa-briefcase list-timeline-icon bg-city"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">+ 3 New Products were added!</p>
-                                                <p class="font-s13">Congratulations!</p>
-                                            </div>
-                                        </li>
-                                        <!-- END Generic Notification -->
-
-                                        <!-- System Notification -->
-                                        <li>
-                                            <div class="list-timeline-time">1 day ago</div>
-                                            <i class="fa fa-check list-timeline-icon bg-success"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">Database backup completed!</p>
-                                                <p class="font-s13">Download the <a href="javascript:void(0)">latest backup</a>.</p>
-                                            </div>
-                                        </li>
-                                        <!-- END System Notification -->
-
-                                        <!-- Facebook Notification -->
-                                        <li>
-                                            <div class="list-timeline-time">3 hrs ago</div>
-                                            <i class="fa fa-facebook list-timeline-icon bg-default"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">+ 290 Page Likes</p>
-                                                <p class="font-s13">This is great, keep it up!</p>
-                                            </div>
-                                        </li>
-                                        <!-- END Facebook Notification -->
-
-                                        <!-- Social Notification -->
-                                        <li>
-                                            <div class="list-timeline-time">2 days ago</div>
-                                            <i class="fa fa-user-plus list-timeline-icon bg-modern"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">+ 3 Friend Requests</p>
-                                                <ul class="nav-users push-10-t push">
-                                                    <li>
-                                                        <a href="base_pages_profile.html">
-                                                            <img class="img-avatar" src="assets/img/avatars/avatar14.jpg" alt="">
-                                                            <i class="fa fa-circle text-success"></i> Jack Greene
-                                                            <div class="font-w400 text-muted"><small>Graphic Designer</small></div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="base_pages_profile.html">
-                                                            <img class="img-avatar" src="assets/img/avatars/avatar2.jpg" alt="">
-                                                            <i class="fa fa-circle text-warning"></i> Judy Alvarez
-                                                            <div class="font-w400 text-muted"><small>Photographer</small></div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="base_pages_profile.html">
-                                                            <img class="img-avatar" src="assets/img/avatars/avatar11.jpg" alt="">
-                                                            <i class="fa fa-circle text-danger"></i> Ethan Howard
-                                                            <div class="font-w400 text-muted"><small>UI Designer</small></div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <!-- END Social Notification -->
-
-                                        <!-- System Notification -->
-                                        <li class="push-5">
-                                            <div class="list-timeline-time">1 week ago</div>
-                                            <i class="fa fa-cog list-timeline-icon bg-primary-dark"></i>
-                                            <div class="list-timeline-content">
-                                                <p class="font-w600">System updated to v2.02</p>
-                                                <p class="font-s13">Check the complete changelog at the <a href="javascript:void(0)">activity page</a>.</p>
-                                            </div>
-                                        </li>
-                                        <!-- END System Notification -->
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- END News -->
-                        </div>
-                        <div class="col-lg-4">
-                            <!-- Content Grid -->
-                            <div class="content-grid">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <!-- Author of the Month -->
-                                        <a class="block block-link-hover2" href="base_pages_profile.html">
-                                            <div class="block-header">
-                                                <h3 class="block-title text-center">Author of the Month</h3>
-                                            </div>
-                                            <div class="block-content block-content-full text-center bg-image" style="background-image: url('assets/img/photos/photo2.jpg');">
-                                                <div>
-                                                    <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/img/avatars/avatar1.jpg" alt="">
-                                                </div>
-                                                <div class="h5 text-white push-15-t push-5">Ashley Welch</div>
-                                                <div class="h5 text-white-op">Web Developer</div>
-                                            </div>
-                                            <div class="block-content">
-                                                <div class="row items-push text-center">
-                                                    <div class="col-xs-6">
-                                                        <div class="push-5"><i class="si si-briefcase fa-2x"></i></div>
-                                                        <div class="h5 font-w300 text-muted">9 Projects</div>
-                                                    </div>
-                                                    <div class="col-xs-6">
-                                                        <div class="push-5"><i class="si si-camera fa-2x"></i></div>
-                                                        <div class="h5 font-w300 text-muted">74 Photos</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <!-- END Author of the Month -->
-
-                                        <!-- Mini Stats -->
-                                        <a class="block block-link-hover3" href="javascript:void(0)">
-                                            <table class="block-table text-center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="width: 50%;">
-                                                            <div class="push-30 push-30-t">
-                                                                <i class="si si-graph fa-3x text-primary"></i>
-                                                            </div>
-                                                        </td>
-                                                        <td class="bg-gray-lighter" style="width: 50%;">
-                                                            <div class="h1 font-w700"><span class="h2 text-muted">+</span> 78</div>
-                                                            <div class="h5 text-muted text-uppercase push-5-t">Sales</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </a>
-                                        <a class="block block-link-hover3" href="javascript:void(0)">
-                                            <table class="block-table text-center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="width: 50%;">
-                                                            <div class="push-30 push-30-t">
-                                                                <i class="si si-social-dribbble fa-3x text-smooth"></i>
-                                                            </div>
-                                                        </td>
-                                                        <td class="bg-gray-lighter" style="width: 50%;">
-                                                            <div class="h1 font-w700"><span class="h2 text-muted">+</span> 69</div>
-                                                            <div class="h5 text-muted text-uppercase push-5-t">Likes</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </a>
-                                        <a class="block block-link-hover3" href="javascript:void(0)">
-                                            <table class="block-table text-center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="width: 50%;">
-                                                            <div class="push-30 push-30-t">
-                                                                <i class="si si-social-youtube fa-3x text-city"></i>
-                                                            </div>
-                                                        </td>
-                                                        <td class="bg-gray-lighter" style="width: 50%;">
-                                                            <div class="h1 font-w700"><span class="h2 text-muted">+</span> 88</div>
-                                                            <div class="h5 text-muted text-uppercase push-5-t">Subs</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </a>
-                                        <a class="block block-link-hover3" href="javascript:void(0)">
-                                            <table class="block-table text-center">
-                                                <tbody>
-                                                    <tr>
-                                                        <td style="width: 50%;">
-                                                            <div class="push-30 push-30-t">
-                                                                <i class="si si-users fa-3x text-primary-dark"></i>
-                                                            </div>
-                                                        </td>
-                                                        <td class="bg-gray-lighter" style="width: 50%;">
-                                                            <div class="h1 font-w700"><span class="h2 text-muted">+</span> 96</div>
-                                                            <div class="h5 text-muted text-uppercase push-5-t"> Followers</div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </a>
-                                        <!-- END Mini Stats -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END Content Grid -->
-                        </div>
-                    </div>
+                    <!-- END Simple Table Full -->
                 </div>
                 <!-- END Page Content -->
             </main>
@@ -1198,12 +1327,19 @@
         <script src="assets/js/plugins/chartjs/Chart.min.js"></script>
 
         <!-- Page JS Code -->
-        <script src="assets/js/pages/base_pages_dashboard.js"></script>
+        <!--<script src="assets/js/pages/base_pages_dashboard.js"></script>-->
         <script>
             jQuery(function () {
                 // Init page helpers (Slick Slider plugin)
                 App.initHelpers('slick');
             });
         </script>
+             
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="assets/js/pages/base_tables_datatables.js"></script>
+
     </body>
 </html>
