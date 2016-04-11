@@ -694,9 +694,14 @@
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label for="mega-lastname">Username</label>
-                                                <input class="form-control input-lg" type="text" id="mega-username" name="mega-username" placeholder="Enter your username..">
+                                            <label class="col-sm-5 control-label" for="example-datetimepicker3">Full options</label>
+                                            <div class="col-md-6">
+                                                <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                    <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-calendar"></span>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -852,6 +857,28 @@
 
         <!-- Page JS Code -->
         <script src="assets/js/pages/base_tables_datatables.js"></script>
+
+        <!-- Page JS Plugins -->
+        <script src="assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-datetimepicker/moment.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+        <script src="assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+        <script src="assets/js/plugins/select2/select2.full.min.js"></script>
+        <script src="assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+        <script src="assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js"></script>
+        <script src="assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+        <script src="assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+        <script src="assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+
+        <!-- Page JS Code -->
+        <script src="assets/js/pages/base_forms_pickers_more.js"></script>
+        <script>
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Datetimepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                App.initHelpers(['datepicker', 'datetimepicker', 'colorpicker', 'maxlength', 'select2', 'masked-inputs', 'rangeslider', 'tags-inputs']);
+            });
+        </script>
 
     </body>
     </html>
