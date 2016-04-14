@@ -649,13 +649,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Bungalows <small>Lista de historicos de bungalows</small>
+                                Bungalows <small>Lista de sorteos de bungalows</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
                                 <li>Bungalows</li>
-                                <li><a class="link-effect" href="">Lista de bungalows</a></li>
+                                <li><a class="link-effect" href="">Lista de sorteos</a></li>
                             </ol>
                         </div>
                     </div>
@@ -665,7 +665,7 @@
                 <!-- Page Content -->
                 <div class="content">
                     <!-- Simple Table Full -->
-                    <div class="block">
+                    <!--<div class="block">
                         <div class="block-content">
                             <form class="form" action="base_forms_pickers_more.html" method="post" onsubmit="return false;">
                                 <div class="row">
@@ -703,10 +703,10 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                             </form>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="block">
                         <!--<div class="block-header">
                             <h3 class="block-title">Simple Table <small>Full</small></h3>
@@ -718,34 +718,45 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
-                                        <th>Bungalow</th>
-                                        <th class="hidden-xs">Capacidad</th>
-                                        <th class="text-center" style="width: 10%;">Estado</th>
-                                        <th class="text-center" style="width: 15%;">Fecha de Reserva</th>
-                                        <th class="hidden-xs" style="width: 15%;">Cantidad de días</th>
+                                        <th>Nombre</th>
+                                        <th class="hidden-xs">Premio</th>
+                                        <th class="text-center" style="width: 15%;">Fecha de inscripción</th>
+                                        <th class="text-center" style="width: 15%;">Fecha de Fin</th>
+                                        <th class="text-center" style="width: 15%;">Fecha de sorteo</th>
+                                        <th class="text-center" style="width: 15%;">Inscripción</th>                                        
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
-                                        <td class="font-w600">Bungalow 101</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Utliziado</span>
+                                        <td class="font-w600">Sorteo por día de la madre</td>
+                                        <td class="hidden-xs">1 bungalow (4 personas) por 3 días</td>
+                                        <td class="text-center"> 10/03/2016 </span>
                                         </td>
-                                        <td class="hidden-xs">12/10/2015</td>
-                                        <td class="hidden-xs">4 días</td>
+                                        <td class="text-center">10/04/2016</td>
+                                        <td class="text-center">15/04/2016</td>
+                                        <td class="text-center"><button class="btn btn-medium btn-primary">Inscribirse </button></td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
-                                        <td class="font-w600">Bungalow 101</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Utliziado</span>
+                                        <td class="font-w600">Sorteo por día del padre</td>
+                                        <td class="hidden-xs">1 bungalow (4 personas) por 2 días</td>
+                                        <td class="text-center"> 15/04/2016 </span>
                                         </td>
-                                        <td class="hidden-xs">06/01/2016</td>
-                                        <td class="hidden-xs">3 días</td>
-                                    </tr>                                    
+                                        <td class="text-center">15/05/2016</td>
+                                        <td class="text-center">20/05/2016</td>
+                                        <td class="text-center"><button class="btn btn-medium btn-warning">No apto </button></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="font-w600">Sorteo por mejora del local</td>
+                                        <td class="hidden-xs">2 bungalow (4 personas) por 3 días</td>
+                                        <td class="text-center"> 15/03/2016 </span>
+                                        </td>
+                                        <td class="text-center">15/05/2016</td>
+                                        <td class="text-center">25/05/2016</td>
+                                        <td class="text-center"><button class="btn btn-medium btn-success">Participando </button></td>
+                                    </tr>                                                                         
                                 </tbody>
                             </table>
                         </div>
