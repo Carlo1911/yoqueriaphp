@@ -624,75 +624,54 @@
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
-                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrator</h2>
+                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
                     </div>
                 </div>
                 <!-- END Page Header -->
 
                 <!-- Stats -->
-                <div class="content bg-white border-b">
-                    <div class="row items-push text-uppercase">
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Eventos Vigentes</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> Este Mes</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">50</a>
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Actividades <small>Inscripción</small>
+                            </h1>
                         </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Cursos Vigentes</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> Este Mes</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">20</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Puntos Club</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> Hoy</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">567 pts.</a>
-                        </div>
-                        <div class="col-xs-6 col-sm-3">
-                            <div class="font-w700 text-gray-darker animated fadeIn">Average Sale</div>
-                            <div class="text-muted animated fadeIn"><small><i class="si si-calendar"></i> All Time</small></div>
-                            <a class="h2 font-w300 text-primary animated flipInX" href="base_comp_charts.html">$ 270</a>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Actividades</li>
+                                <li><a class="link-effect" href="">Inscripción de actividades</a></li>
+                            </ol>
                         </div>
                     </div>
                 </div>
                 <!-- END Stats -->
 
                 <!-- Page Content -->
-                <div class="content">
-                    <div class="block">
+                <div class="content content-narrow">
+                    <div class="block block-bordered">
                         <div class="block-header">
                             <ul class="block-options">
                                 <li>
                                     <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                 </li>
                             </ul>
-                            <h3 class="block-title">ACTIVIDADES</h3>
+                            <h3 class="block-title"></h3>
                         </div>
 
                         <!-- Block v2 -->
                         <div class="block-content">
                             <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
                                 <div class="row">
-                                    <div class="col-sm-7">
+                                    <div class="col-sm-8">
                                         <div class="form-group">
-                                            <div class="col-xs-6">
-                                                <label for="mega-firstname">Codigo</label>
-                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Enter your firstname.." value="" >
-                                            </div>
-                                            <div class="col-xs-6">
-                                                <label for="mega-lastname">Nombre</label>
-                                                <input class="form-control input-lg" type="text" id="mega-lastname" name="mega-lastname" placeholder="Enter your lastname.." value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="example-select">Local</label>
+                                            <label class="col-xs-12" for="example-select">Actividad</label>
                                             <div class="col-sm-9">
                                                 <select class="form-control input-lg" id="example-select" name="example-select" size="1">
-                                                    <option value="0">Seleccione un local</option>
-                                                    <option value="1">Local #1</option>
-                                                    <option value="2">Local #2</option>
-                                                    <option value="3">Local #3</option>
+                                                    <option value="0">Seleccione una actividad</option>
+                                                    <option value="1">Actividad #1</option>
+                                                    <option value="2">Actividad #2</option>
+                                                    <option value="3">Actividad #3</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -702,19 +681,38 @@
                                 <div class="row">
                                     <div class="col-sm-7">
                                         <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label for="mega-firstname">Descripcion</label>
-                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Enter your firstname..">
+                                            <div class="col-xs-6">
+                                                <label for="mega-firstname">Nombre</label>
+                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Ingrese un nombre.." value="" disabled>
                                             </div>
-                                    
+                                            <div class="col-xs-6">
+                                                <label for="mega-lastname">Ambiente</label>
+                                                <input class="form-control input-lg" type="text" id="mega-lastname" name="mega-lastname" placeholder="Ingrese un ambiente.." value="" disabled>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Sede</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control input-lg" id="example-select" name="example-select" size="1" disabled>
+                                                    <option value="0">Seleccione una sede</option>
+                                                    <option value="1">Sede #1</option>
+                                                    <option value="2">Sede #2</option>
+                                                    <option value="3">Sede #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
                                             <div class="col-xs-12">
-                                                <label for="mega-lastname">Fecha Actividad</label>
+                                                <label for="mega-lastname">Fecha/Hora Actividad</label>
                                                 <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
-                                                    <input class="form-control input-lg" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
+                                                    <input class="form-control input-lg" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Escoja una fecha.." disabled>
                                                     <span class="input-group-addon">
                                                         <span class="fa fa-calendar"></span>
                                                     </span>
@@ -722,39 +720,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-sm-7">
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label for="mega-bio">Comentarios</label>
-                                                <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="22" placeholder="Enter a few details about yourself.."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div class="col-sm-5">
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label for="mega-city">Where do you live?</label>
-                                                <input class="form-control input-lg" type="text" id="mega-city" name="mega-city" placeholder="Enter your location..">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <label for="mega-skills">Skills</label>
-                                                <select class="form-control" id="mega-skills" name="mega-skills" size="7" multiple>
-                                                    <option value="1">HTML</option>
-                                                    <option value="2">CSS</option>
-                                                    <option value="3">JavaScript</option>
-                                                    <option value="4">PHP</option>
-                                                    <option value="5">Ruby</option>
-                                                    <option value="6">Photoshop</option>
-                                                    <option value="7">Illustrator</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
+                                        <label for="mega-city">Precio (S/ )</label>
+                                        <input class="form-control input-lg" type="text" id="mega-city" name="mega-city" placeholder="Ingrese un precio.." disabled>
+                                    </div>
+
+                                    <div class="col-sm-2">
+                                    </div>   
+                                    
+                                    
+                                </div>
+
+                                
+                                <div class="form-group">
                                             <label class="col-xs-12">Tipo</label>
                                             <div class="col-xs-12">
                                                 <label class="css-input css-radio css-radio-warning push-10-r">
@@ -767,14 +746,25 @@
                                                     <input type="radio" name="mega-gender-group"><span></span> Evento
                                                 </label>
                                             </div>
+                                </div>
+                                
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <label for="mega-bio">Comentarios</label>
+                                                <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="8" placeholder="Ingrese algun comentario.." disabled></textarea>
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-4">
                                     </div>
                                     <div class="col-xs-2">
-                                        <button class="btn btn-primary" type="submit"><i class="fa fa-check push-5-r"></i> Guardar</button>
+                                        <button class="btn btn-primary" type="submit"><i class="fa fa-check push-5-r"></i> Inscribir</button>
                                     </div>
                                     <div class="col-xs-2">
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-arrow-left push-5-r"></i> Regresar</button>
