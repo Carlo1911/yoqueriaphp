@@ -665,7 +665,7 @@
                                     <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                 </li>
                             </ul>
-                            <h3 class="block-title">MANTENIMIENTO PRODUCTOS/SERVICIOS</h3>
+                            <h3 class="block-title">MANTENIMIENTO PROVEEDORES</h3>
                         </div>
 
                         <div class="block-content">
@@ -674,25 +674,24 @@
                                     <div class="col-sm-7">
                                         <div class="form-group">
                                             <div class="col-xs-6">
-                                                <label for="pro_Codigo">Codigo</label>
-                                                <input class="form-control" type="text" id="pro_Codigo" name="pro_Codigo"  disabled>
+                                                <label for="pro_RUC">R.U.C.:</label>
+                                                <input class="form-control" type="text" id="pro_RUC" name="pro_RUC" placeholder="Ingrese el RUC.." value="987654001235" >
                                             </div>
                                             <div class="col-xs-6">
-                                                <label for="pro_Nombre">Nombre</label>
-                                                <input class="form-control" type="text" id="pro_Nombre" name="pro_Nombre" placeholder="Enter a name.."">
+                                                <label for="pro_RazonSocial">Razón Social</label>
+                                                <input class="form-control" type="text" id="pro_RazonSocial" name="pro_RazonSocial" placeholder="Ingrese el nombre de su compañía.." value="Proveedor">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-5">
                                         <div class="form-group">
-                                            <label class="col-xs-12">Tipo</label>
-                                            <div class="col-xs-12">
-                                                <label class="css-input css-radio css-radio-warning push-10-r">
-                                                    <input type="radio" name="pro_Tipo"><span></span> Producto
-                                                </label>
-                                                <label class="css-input css-radio css-radio-warning">
-                                                    <input type="radio" name="pro_Tipo"><span></span> Servicio
-                                                </label>
+                                            <label class="col-xs-12" for="pro_Estado">Estado</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="pro_Estado" name="pro_Estado" size="1">
+                                                    <option value="0">Seleccione un estado</option>
+                                                    <option value="1" selected>Activo</option>
+                                                    <option value="2">Inactivo</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -701,42 +700,81 @@
                                 <div class="row">
                                     <div class="col-sm-7">
                                         <div class="form-group">
+                                            <div class="col-xs-6">
+                                                <label for="pro_Provincia">Provincia:</label>
+                                                <input class="form-control" type="text" id="pro_Provincia" name="pro_Provincia" placeholder="Ingrese la provincia.." value="Lima">
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <label for="pro_Distrito">Distrito</label>
+                                                <input class="form-control" type="text" id="pro_Distrito" name="pro_Distrito" placeholder="Ingrese el distrito.." value="San Miguel">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
                                             <div class="col-xs-12">
-                                                <label for="pro_Descripcion">Descripción</label>
-                                                <textarea class="form-control input-lg" id="pro_Descripcion" name="pro_Descripcion" rows="10" placeholder="Enter a few details about the product/service.."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        <div class="col-sm-5">
-                                            <div class="form-group">
-                                                <div class="col-xs-12">
-                                                    <label for="pro_Precio">Precio</label>
-                                                    <input class="form-control" type="text" id="pro_Precio" name="pro_Precio" placeholder="Enter your price..">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="col-xs-12">
-                                                    <label for="pro_Stock">Stock</label>
-                                                    <input class="form-control" type="text" id="pro_Stock" name="pro_Stock" placeholder="Enter your stock..">
+                                                <label for="example-datetimepicker3">Fecha de Registro</label>
+                                                <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                    <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Ingrese una fecha.." value="02/05/15">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-calendar"></span>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
-                                    
+                                    </div>
+                                </div>                                
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <label for="pro_Direccion">Dirección</label>
+                                                <input class="form-control" type="text" id="pro_Direccion" name="pro_Direccion" placeholder="Ingrese la dirección.." value="Av. San Francisco 123">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="pro_Telefono">Teléfono</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" type="text" id="pro_Telefono" name="pro_Telefono" placeholder="Ingrese el teléfono.." value="4465667">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="col-xs-3">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="pro_Estado">Tiempo de Vigencia</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" type="text" id="mega-city" name="mega-city" placeholder="Ingrese el tiempo de vigencia.." value="3 meses">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-xs-2">
-                                        <button class="btn btn-primary" type="submit"><i class="fa fa-check push-5-r"></i> Guardar</button>
-                                    </div>
-                                    <div class="col-xs-2">
-                                        <button class="btn btn-warning" type="submit"><i class="fa fa-remove push-5-r"></i> Cancelar</button>
-                                    </div>
-                                    <div class="col-xs-3">
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="pro_Correo">Correo</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" type="text" id="pro_Correo" name="pro_Correo" placeholder="Ingrese el email.." value="proveedor@gmail.com">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                    <div class="form-group">
+                                        <div class="col-xs-3">
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <a href="Consultar_Proveedores.html"><button class="btn btn-primary" type="submit"><i class="fa fa-check push-5-r"></i> Guardar</button>
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <a href="Consultar_Proveedores.html"><button class="btn btn-warning" type="submit"><i class="fa fa-remove push-5-r"></i> Cancelar</button>
+                                        </div>
+                                        <div class="col-xs-3">
+                                        </div>
+                                    </div>
                             </form>
-                        </div>                        
+                        </div>
                     </div>  
                 </div>
                 <!-- END Page Content -->
