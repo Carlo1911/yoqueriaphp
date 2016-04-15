@@ -529,7 +529,7 @@
                                             <a href="javascript:void(0)">Ver multas</a>
                                         </li>
                                     </ul>
-                                </li>                                                    
+                                </li>
                                 <li>
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-pointer"></i><span class="sidebar-mini-hide">Sedes</span></a>
                                     <ul>
@@ -716,13 +716,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Sedes <small>Lista completa de sedes</small>
+                                Ambientes <small>Lista completa de ambientes</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
-                                <li>Sedes</li>
-                                <li><a class="link-effect" href="">Lista de sedes</a></li>
+                                <li>Ambientes</li>
+                                <li><a class="link-effect" href="">Lista de ambientes</a></li>
                             </ol>
                         </div>
                     </div>
@@ -759,7 +759,7 @@
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -773,7 +773,7 @@
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -787,7 +787,7 @@
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -801,7 +801,7 @@
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -833,11 +833,9 @@
         <!-- END Page Container -->
 
         <!-- Apps Modal -->
-        <!-- Opens from the button in the header 
-        <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-sm modal-dialog modal-dialog-top">
                 <div class="modal-content">
-                    <!-- Apps Block 
                     <div class="block block-themed block-transparent">
                         <div class="block-header bg-primary-dark">
                             <ul class="block-options">
@@ -845,30 +843,16 @@
                                     <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
                                 </li>
                             </ul>
-                            <h3 class="block-title">Apps</h3>
+                            <h3 class="block-title">YoqueriaPhp</h3>
                         </div>
                         <div class="block-content">
                             <div class="row text-center">
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="index.html">
-                                        <div class="block-content text-white bg-default">
-                                            <i class="si si-speedometer fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Backend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="frontend_home.html">
-                                        <div class="block-content text-white bg-modern">
-                                            <i class="si si-rocket fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Frontend</div>
-                                        </div>
-                                    </a>
+                                <div class="col-sm-12">
+                                    Ambiente eliminado con exito!!
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- END Apps Block 
                 </div>
             </div>
         </div>
@@ -897,7 +881,7 @@
                 App.initHelpers('slick');
             });
         </script>
-             
+
         <!-- Page JS Plugins -->
         <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
 
