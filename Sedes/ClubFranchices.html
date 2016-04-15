@@ -529,7 +529,7 @@
                                             <a href="javascript:void(0)">Ver multas</a>
                                         </li>
                                     </ul>
-                                </li>                                                    
+                                </li>
                                 <li>
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-pointer"></i><span class="sidebar-mini-hide">Sedes</span></a>
                                     <ul>
@@ -758,8 +758,8 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Sede"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar Sede" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -772,8 +772,8 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Sede"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar Sede"><i class="fa fa-times" data-toggle="modal" data-target="#deleteModal"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -786,8 +786,8 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Sede"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar Sede" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -800,8 +800,8 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Sede"><i class="fa fa-pencil"></i></button>
+                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar Sede" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -831,13 +831,35 @@
             <!-- END Footer -->
         </div>
         <!-- END Page Container -->
-
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-sm modal-dialog modal-dialog-top">
+                <div class="modal-content">
+                    <div class="block block-themed block-transparent">
+                        <div class="block-header bg-primary-dark">
+                            <ul class="block-options">
+                                <li>
+                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">YoqueriaPhp</h3>
+                        </div>
+                        <div class="block-content">
+                            <div class="row text-center">
+                                <div class="col-sm-12">
+                                    Sede eliminada con exito!!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Apps Modal -->
-        <!-- Opens from the button in the header 
+        <!-- Opens from the button in the header
         <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-sm modal-dialog modal-dialog-top">
                 <div class="modal-content">
-                    <!-- Apps Block 
+                    <!-- Apps Block
                     <div class="block block-themed block-transparent">
                         <div class="block-header bg-primary-dark">
                             <ul class="block-options">
@@ -868,7 +890,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- END Apps Block 
+                    <!-- END Apps Block
                 </div>
             </div>
         </div>
@@ -897,7 +919,7 @@
                 App.initHelpers('slick');
             });
         </script>
-             
+
         <!-- Page JS Plugins -->
         <script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
 
