@@ -649,7 +649,7 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Bungalows <small>Lista completa de bungalows</small>
+                                Bungalows <small>Lista de historicos de bungalows</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
@@ -689,10 +689,11 @@
                                             <label class="col-xs-12" for="example-select">Seleccione una sede</label>
                                             <div class="col-sm-6">
                                                 <select class="form-control" id="example-select" name="example-select" size="1">
-                                                    <option value="0">Sede principal</option>
-                                                    <option value="1">Sede #1</option>
-                                                    <option value="2">Sede #2</option>
-                                                    <option value="3">Sede #3</option>
+                                                    <option value="0">Todas las sedes</option>
+                                                    <option value="1">Sede principal</option>
+                                                    <option value="2">Sede #1</option>
+                                                    <option value="3">Sede #2</option>
+                                                    <option value="4">Sede #3</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -718,69 +719,37 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
+                                        <th >Sede</th>
                                         <th>Bungalow</th>
                                         <th class="hidden-xs">Capacidad</th>
-                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
-                                        <th class="text-center" style="width: 10%;">Acciones</th>
+                                        <th class="text-center" style="width: 10%;">Estado</th>
+                                        <th class="text-center" style="width: 15%;">Fecha de Reserva</th>
+                                        <th class="hidden-xs" style="width: 15%;">Cantidad de días</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
+                                        <td class="font-w600">Sede Principal</td>
                                         <td class="font-w600">Bungalow 101</td>
                                         <td class="hidden-xs">4 personas</td>
                                         <td class="hidden-xs">
-                                            <span class="label label-danger">Ocupado</span>
+                                            <span class="label label-success">Utliziado</span>
                                         </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
+                                        <td class="hidden-xs">12/10/2015</td>
+                                        <td class="hidden-xs">4 días</td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
-                                        <td class="font-w600">Bungalow 102</td>
+                                        <td class="font-w600">Sede Principal</td>
+                                        <td class="font-w600">Bungalow 101</td>
                                         <td class="hidden-xs">4 personas</td>
                                         <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
+                                            <span class="label label-success">Utliziado</span>
                                         </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="font-w600">Bungalow 103</td>
-                                        <td class="hidden-xs">6 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="font-w600">Bungalow 104</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>                                                                       
+                                        <td class="hidden-xs">06/01/2016</td>
+                                        <td class="hidden-xs">3 días</td>
+                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
