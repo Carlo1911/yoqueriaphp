@@ -1,0 +1,7 @@
+Fonts
+http://fontawesome.io/
+http://www.fontsquirrel.com/fonts/open-sans
+http://www.fontsquirrel.com/fonts/source-sans-pro
+
+Icons
+https://www.behance.net/gallery/11391127/Simple-Line-Icons-(Free-PSD-Webfont)
