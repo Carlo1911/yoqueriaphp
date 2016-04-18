@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>YoQúeríaPHP - Admin</title>
+    <title>YoQúeríaPHP - Dashboard Usuario</title>
 
     <meta name="description" content="YoQúeríaPHP - Admin">
     <meta name="author" content="YoQúeríaPHP">
@@ -710,14 +710,12 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="col-xs-12" for="example-select">Seleccione un bungalow</label>
+                                            <label class="col-xs-12" for="example-select">Bungalow elegido</label>
                                             <div class="col-md-6">
-                                                <select class="form-control" id="example-select" name="example-select" size="1">
-                                                    <option value="0">Bungalows 101</option>
-                                                    <option value="1">Bungalows 102</option>
-                                                    <option value="2">Bungalows 201</option>
-                                                    <option value="3">Bungalows 301</option>
-                                                </select>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-bed"></i></span>
+                                                    <input class="form-control" type="text" id="example-input1-group1" name="example-input1-group1" placeholder="Username" disabled="" value="Bungalows 101">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -779,7 +777,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label class="col-xs-12" for="example-select">Días de reserva</label>
-                                            <div class="col-sm-9">
+                                            <div class="col-sm-6">
                                                 <select class="form-control" id="example-select" name="example-select" size="1">
                                                     <option value="1">1 día</option>
                                                     <option value="2">2 días</option>
@@ -797,17 +795,19 @@
                                         <div class="form-group">
                                             <div class="col-xs-12">
                                                 <label for="mega-bio">Observaciones</label>
-                                                <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="8" placeholder="Ingrese alguna observación adicional que debamos tener en cuenta para atenderlo mejor"></textarea>
+                                                <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="8" placeholder="Ingrese alguna observación adicional que debamos tener en cuenta para atenderlo mejor."></textarea>
                                             </div>
                                         </div>
                                 </div>
                                 <div class="form-group">
+                                <center>
                                     <div class="col-xs-6">
-                                        <button class="btn btn-danger" type="submit"><i class="fa fa-times push-5-r"></i> Cancelar</button>
+                                        <button class="btn btn-danger" type="submit" ><i class="fa fa-times push-5-r"></i> Cancelar</button>
                                     </div>
                                     <div class="col-xs-6">
                                         <button class="btn btn-success" type="submit"><i class="fa fa-check push-5-r"></i> Reservar</button>
-                                    </div>                                    
+                                    </div>
+                                    </center>                                    
                                 </div>
                             </form>
                         </div>
