@@ -479,7 +479,7 @@
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-bicycle"></i><span class="sidebar-mini-hide">Actividades</span></a>
                                     <ul>
                                         <li>
-                                            <a href="ConsultActivities.html">Consultar actividades</a>
+                                            <a href="Consultar_Actividades.html">Consultar actividades</a>
                                         </li>
                                         <li>
                                             <a href="ReserveCourse.html">Inscripción a curso</a>
@@ -664,96 +664,117 @@
                         <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
                     </div>
                 </div>
+                <!-- END Page Header -->
 
-
+                <!-- Stats -->
                 <div class="content bg-gray-lighter">
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Actividades <small>Lista de Actividades/Eventos/Cursos</small>
+                                Actividades <small>Inscripción</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
                                 <li>Actividades</li>
-                                <li><a class="link-effect" href="">Lista de Actividades</a></li>
+                                <li><a class="link-effect" href="">Inscripción de actividades</a></li>
                             </ol>
                         </div>
                     </div>
                 </div>
-                <!-- END Page Header -->
+                <!-- END Stats -->
 
                 <!-- Page Content -->
                 <div class="content content-narrow">
-                    <!-- Simple Table Full -->
                     <div class="block block-bordered">
-                        <!--<div class="block-header">
-                            <h3 class="block-title">Simple Table <small>Full</small></h3>
-                        </div>-->
-                        <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-bordered table-striped js-dataTable-simple">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center" style="width: 5%;">#</th>
-                                        <th class="hidden-xs" style="width: 30%;">Nombre</th>
-                                        <th class="hidden-xs" style="width: 30%;">Descripcion</th>
-                                        <th class="hidden-xs" style="width: 15%;">Tipo</th>
-                                        <th class="hidden-xs" style="width: 15%;">Sede</th>
-                                        <th class="hidden-xs" style="width: 15%;">Fecha Inscripcion</th>
-                                        <th >Acción</th> 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="font-w600">Curso #1</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Curso</span>
-                                        </td>
-                                        <td class="hidden-xs">Sede principal</td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td> <a href=""><button class="btn btn-sm btn-warning"> No disponible</button></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="font-w600">Evento #2</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Evento</span>
-                                        </td>
-                                        <td class="hidden-xs">Sede #1</td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td> <a href=""><button class="btn btn-sm btn-success"> Inscribirse</button></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="font-w600">Actividad #3</td>
-                                        <td class="hidden-xs">6 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Actividad</span>
-                                        </td>
-                                        <td class="hidden-xs">Sede principal</td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td> <a href=""><button class="btn btn-sm btn-success"> Inscribirse</button></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="font-w600">Curso #4</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Curso</span>
-                                        </td>
-                                        <td class="hidden-xs">Sede #2</td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td> <a href=""><button class="btn btn-sm btn-success"> Inscribirse</button></a></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title"></h3>
                         </div>
-                    </div>
-                    <!-- END Simple Table Full -->
+
+                        <!-- Block v2 -->
+                        <div class="block-content">
+                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Actividad/Curso elegido</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-bicycle"></i></span>
+                                                    <input class="form-control" type="text" id="example-input1-group1" name="example-input1-group1" placeholder="Username" disabled="" value="Actividad #3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Sede elegida</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                                                    <input class="form-control" type="text" id="example-input1-group1" name="example-input1-group1" placeholder="Username" disabled="" value="Sede principal">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-datetimepicker3">Fecha de inscripción</label>
+                                            <div class="col-md-6">
+                                                <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                    <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Seleccione una fecha y hora..">
+                                                    <span class="input-group-addon">
+                                                        <span class="fa fa-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Duración</label>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+
+                                                    <input class="form-control" type="text" id="example-input1-group1" name="example-input1-group1" placeholder="Username" disabled="" value="3 días">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <label for="mega-bio">Observaciones</label>
+                                                <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="8" placeholder="Ingrese alguna observación adicional que debamos tener en cuenta para atenderlo mejor."></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <div class="col-xs-2 col-xs-offset-4"><!-- type="submit" -->
+                                        <a href="Consultar_actividades.html"><button class="btn btn-danger" type="button" ><i class="fa fa-times push-5-r"></i> Cancelar</button></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="Consultar_actividades.html"><button class="btn btn-success" type="button"><i class="fa fa-check push-5-r"></i> Inscribirse</button></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <!-- END Block v2 -->                        
+                    </div>  
                 </div>
                 <!-- END Page Content -->
             </main>
