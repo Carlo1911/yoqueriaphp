@@ -1,0 +1,1 @@
+Si se necesita cambiar algo de los sidebars, cabeceras o footers se debe hacer en la plantilla y luego se le pega a las páginas que se van a utilizar.
