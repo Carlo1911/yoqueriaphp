@@ -824,72 +824,57 @@
                         <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrador</h2>
                     </div>
                 </div>
-
-
-                <div class="content bg-gray-lighter">
-                    <div class="row items-push">
-                        <div class="col-sm-7">
-                            <h1 class="page-heading">
-                                Socios <small>Lista completa de Socios</small>
-                            </h1>
-                        </div>
-                        <div class="col-sm-5 text-right hidden-xs">
-                            <ol class="breadcrumb push-10-t">
-                                <li>Socios</li>
-                                <li><a class="link-effect" href="">Lista completa de Socios</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
                 <!-- END Page Header -->
-
-                <!-- Page Content -->
                 <div class="content">
-                    <!-- Simple Table Full -->                    
                     <div class="block">
-                        <!--<div class="block-header">
-                            <h3 class="block-title">Simple Table <small>Full</small></h3>
-                        </div>-->
-
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">Membresía - Añadir nueva solicitud Membresía</h3>
+                        </div>
                         <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-bordered table-striped js-dataTable-simple">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center"></th>
-                                        <th class="text-center" style="width: 20%;">Socios</th>
-                                        <th class="text-center" style="width: 40%;">Documento de identidad</th>                
-                                        <th class="text-center" style="width: 40%;">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="text-center font-w600">Socio X</td>
-                                        <td class="text-center font-w600">75834923</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Socio"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Eliminar Socio"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="text-center font-w600">Socio Y</td>
-                                        <td class="text-center font-w600">75834923</td>        
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Socio"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Eliminar Socio"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>                                    
-                                </tbody>
-                            </table>
+                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="col-xs-12" for="mega-firstname">Nombre</label>
+                                                <div class="col-md-6">
+                                                    
+                                                    <input class="form-control input-md" type="text" id="mega-firstname" name="mega-firstname" placeholder="Ingrese el nombre.." value="" >
+                                                </div>                                            
+                                            </div>  
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="col-xs-12" for="mega-firstname">Documento de identidad</label>
+                                                <div class="col-md-8">
+                                                    
+                                                    <input class="form-control input-md" type="text" id="mega-firstname" name="mega-firstname" placeholder="Ingrese el número de doc. de identidad.." value="" >
+                                                </div>                                            
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="col-xs-12" for="mega-firstname">Correo Electrónico</label>
+                                                <div class="col-md-6">
+                                                    
+                                                    <input class="form-control input-md" type="text" id="mega-firstname" name="mega-firstname" placeholder="Ingrese el correo electrónico.." value="" >
+                                                </div>                                            
+                                            </div>  
+                                        </div>                                    
+                                    </div>
+                                    <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-warning" type="submit"><i class="fa fa-check push-5-r"></i> Agregar Solicitud</button>
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                    <!-- END Simple Table Full -->
                 </div>
             </main>
             <!-- END Main Container -->
