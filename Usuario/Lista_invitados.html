@@ -479,36 +479,57 @@
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-bicycle"></i><span class="sidebar-mini-hide">Actividades</span></a>
                                     <ul>
                                         <li>
-                                            <a href="Consultar_actividades.html">Consultar actividades</a>
+                                            <a href="ConsultActivities.html">Consultar actividades</a>
                                         </li>
                                         <li>
-                                            <a href="Historico_actividades.html">Ver inscripción de Actividades/Eventos</a>
+                                            <a href="ReserveCourse.html">Inscripción a curso</a>
+                                        </li>
+                                        <li>
+                                            <a href="ReserveActivity.html">Inscripción a Actividad</a>
                                         </li>
                                         <li>
                                             <a href="ReserveEvent.html">Inscripción a Evento</a>
                                         </li>
+                                        <!--<li>
+                                            <a href="base_tables_tools.html">Modificar inscripción</a>
+                                        </li>
+                                        <li>
+                                            <a href="base_tables_pricing.html">Cancelar inscripción</a>
+                                        </li>-->
                                     </ul>
                                 </li>
                                 <li>
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-futbol-o"></i><span class="sidebar-mini-hide">Canchas</span></a>
                                     <ul>
                                         <li>
-                                            <a href="Consultar_canchas.html">Consultar canchas</a>
+                                            <a href="ReservaCanchas_index.html">Consultar canchas</a>
                                         </li>
                                         <li>
-                                            <a href="Historico_canchas.html">Ver reserva de canchas</a>
+                                            <a href="ReservaCanchas_new.html">Reservar</a>
                                         </li>
+                                        <li>
+                                            <a href="ReservaCanchas_edit.html">Editar reserva</a>
+                                        </li>
+                                        <!--<li>
+                                            <a href="base_forms_editors.html">Cancelar reserva</a>
+                                        </li>-->
                                     </ul>
                                 </li>
                                 <li>
                                     <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="fa fa-map-signs"></i><span class="sidebar-mini-hide">Servicios</span></a>
                                     <ul>
                                         <li>
-                                            <a href="Consultar_servicios.html">Consultar servicios</a>
+                                            <a href="Servicios_index.html">Consultar servicios</a>
                                         </li>
                                         <li>
-                                            <a href="Historico_servicios.html">Ver solicitudes de servicios</a>
+                                            <a href="Servicios_new.html">Reservar</a>
                                         </li>
+                                        <li>
+                                            <a href="Servicios_edit.html">Editar reserva</a>
+                                        </li>
+                                        <!--<li>
+                                            <a href="base_forms_editors.html">Cancelar reserva</a>
+                                        </li>-->
                                     </ul>
                                 </li>
                                 <li>
@@ -521,13 +542,7 @@
                                             <a href="cajero_pago_membresia.html">Renovar membresía</a>
                                         </li>
                                         <li>
-                                            <a href="Lista_invitados.html">Lista de invitados</a>
-                                        </li>
-                                        <li>
-                                            <a href="Agregar_invitados.html">Registrar invitados</a>
-                                        </li>
-                                        <li>
-                                            <a href="Consultar_socios_objeciones.html">Consultar socios en objeciones</a>
+                                            <a href="agregar_invitado.html">Registrar invitados</a>
                                         </li>
                                         <!--<li>
                                             <a href="javascript:void(0)">Ver multas</a>
@@ -655,13 +670,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Bungalows <small>Lista completa de bungalows</small>
+                                Actividades <small>Lista de inscripciones</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
-                                <li>Bungalows</li>
-                                <li><a class="link-effect" href="">Lista de bungalows</a></li>
+                                <li>Actividades</li>
+                                <li><a class="link-effect" href="">Lista de Actividades/Cursos</a></li>
                             </ol>
                         </div>
                     </div>
@@ -669,14 +684,13 @@
                 <!-- END Page Header -->
 
                 <!-- Page Content -->
-                <div class="content">
+                <div class="content content-narrow">
                     <!-- Simple Table Full -->
                     <div class="block">
                         <div class="block-content">
                             <form class="form" action="base_forms_pickers_more.html" method="post" onsubmit="return false;">
                                 <div class="row">
                                     <div class="col-lg-6">
-
                                         <div class="form-group">
                                             <label class="col-xs-12 control-label" for="example-daterange1">Rango de fechas</label>
                                             <div class="col-md-6">
@@ -687,8 +701,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
@@ -713,69 +725,63 @@
                             </form>
                         </div>
                     </div>
-                    <div class="block">
+                    <div class="block block-bordered">
                         <!--<div class="block-header">
                             <h3 class="block-title">Simple Table <small>Full</small></h3>
                         </div>-->
-
                         <div class="block-content">
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
                             <table class="table table-bordered table-striped js-dataTable-simple">
                                 <thead>
                                     <tr>
-                                        <th class="text-center"></th>
-                                        <th >Sede</th>
-                                        <th>Bungalow</th>
-                                        <th class="hidden-xs">Capacidad</th>
-                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
+                                        <th class="text-center" style="width: 5%;">#</th>
+                                        <th class="hidden-xs" style="width: 30%;">Nombre</th>
+                                        <th class="hidden-xs" style="width: 30%;">DNI</th>
+                                        <th class="hidden-xs" style="width: 15%;">Edad</th>
+                                        <th class="hidden-xs" style="width: 15%;">Fecha de Registro</th>
+                                        <th >Acción</th> 
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 101</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Ocupado</span>
+                                        <td class="font-w600">Luis Allasi</td>
+                                        <td class="hidden-xs">71313505</td>
+                                        <td class="hidden-xs">22</td>
+                                        <td class="hidden-xs">12/04/2015</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Editar_Agregar_invitados.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <a><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Bungalow"><i class="fa fa-times"></i></button></a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 102</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
+                                        <td class="font-w600">Luis Alberto García</td>
+                                        <td class="hidden-xs">71313575</td>
+                                        <td class="hidden-xs">23</td>
+                                        <td class="hidden-xs">12/04/2015</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Editar_Agregar_invitados.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <a><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Bungalow"><i class="fa fa-times"></i></button></a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">3</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 103</td>
-                                        <td class="hidden-xs">6 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
+                                        <td class="font-w600">Alberto Rojas</td>
+                                        <td class="hidden-xs">71363575</td>
+                                        <td class="hidden-xs">22</td>
+                                        <td class="hidden-xs">13/04/2015</td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Editar_Agregar_invitados.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <a><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Bungalow"><i class="fa fa-times"></i></button></a>
+                                            </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="font-w600">Sede #1</td>
-                                        <td class="font-w600">Bungalow 104</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">5</td>
-                                        <td class="font-w600">Sede #2</td>
-                                        <td class="font-w600">Bungalow 105</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
-                                        </td>
-                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
@@ -796,7 +802,7 @@
                     Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="#" target="_blank">yoQúeríaPHP</a>
                 </div>
                 <div class="pull-left">
-                    <a class="font-w600" href="#" target="_blank">SwUI 1.1</a> &copy; <span class="js-year-copy"></span>
+                    <a class="font-w600" href="#" target="_blank">SwUI 1.0</a> &copy; <span class="js-year-copy"></span>
                 </div>
             </footer>
             <!-- END Footer -->
