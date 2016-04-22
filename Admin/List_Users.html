@@ -818,7 +818,85 @@
 
             <!-- Main Container -->
             <main id="main-container">
-                
+                <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
+                    <div class="push-50-t push-15">
+                        <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
+                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
+                    </div>
+                </div>
+
+
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Usuarios <small>Lista completa de usuarios</small>
+                            </h1>
+                        </div>
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Usuarios</li>
+                                <li><a class="link-effect" href="">Lista de usuarios</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content">
+                    <!-- Simple Table Full -->
+                    <div class="block">
+                        <!--<div class="block-header">
+                            <h3 class="block-title">Simple Table <small>Full</small></h3>
+                        </div>-->
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table class="table table-bordered table-striped js-dataTable-simple">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"></th>
+                                        <th class="font-w600">Usuario</th>
+                                        <th class="hidden-xs">Documento de identidad</th>
+                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
+                                        <th class="text-center" style="width: 10%;">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="font-w600">Juan Perez Perez</td>
+                                        <td class="hidden-xs">38572142</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">Activo</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="./EditUser.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Usuario"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" title="Eliminar Usuario" data-target="#deleteModal"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="font-w600">A B C</td>
+                                        <td class="hidden-xs">56348756</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">Inactivo</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="./EditUser.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Usuario"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" title="Eliminar Usuario" data-target="#deleteModal"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Simple Table Full -->
+                </div>
             </main>
             <!-- END Main Container -->
 
