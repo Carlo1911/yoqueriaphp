@@ -822,7 +822,7 @@
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
-                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
+                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrador</h2>
                     </div>
                 </div>
 
@@ -831,13 +831,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Bungalows <small>Lista completa de bungalows</small>
+                                Bungalows <small>Edición</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
                                 <li>Bungalows</li>
-                                <li><a class="link-effect" href="">Lista de bungalows</a></li>
+                                <li><a class="link-effect" href="">Edición de bungalow</a></li>
                             </ol>
                         </div>
                     </div>
@@ -845,16 +845,89 @@
                 <!-- END Page Header -->
 
                 <!-- Page Content -->
-                <div class="content">
-                    <!-- Simple Table Full -->
-                    <div class="block">
+                <div class="content content-narrow">
+                    <!-- Mega Form -->
+                    <div class="block block-bordered">
+                        <div class="block-header bg-gray-lighter">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="block-content">
-                            <form class="form" action="base_forms_pickers_more.html" method="post" onsubmit="return false;">
+                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
                                 <div class="row">
                                     <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label class="col-xs-12" for="example-select">Seleccione una sede</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="example-select" name="example-select" size="1" >
+                                                    <option value="0" selected>Sede principal</option>
+                                                    <option value="1" >Sede #1</option>
+                                                    <option value="2">Sede #2</option>
+                                                    <option value="3">Sede #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-text-input">Nombre de bungalow</label>
+                                            <div class="col-sm-9">
+                                                <input class="form-control" id="example-text-input" name="example-text-input" placeholder="Bungalows ###" type="text" value="Bungalow 104">
+                                                <div class="help-block">Agregue el nombre y numeración</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
 
                                         <div class="form-group">
-                                            <label class="col-xs-12 control-label" for="example-daterange1">Rango de fechas</label>
+                                            <label class="col-xs-12" for="example-select">Seleccione una capacidad</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="0">2 personas</option>
+                                                    <option value="1">3 personas</option>
+                                                    <option value="2" selected >4 personas</option>
+                                                    <option value="3">5 personas</option>
+                                                    <option value="4">6 personas</option>
+                                                    <option value="5">7 personas</option>
+                                                    <option value="6">8 personas</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Estado del bungalow</label>
+                                            <div class="col-sm-9">
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="1">Disponible</option>
+                                                    <option value="2">Mantenimiento</option>
+                                                    <option value="3">Próximamente</option>
+                                                    <option value="4">Detenido</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                       <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <label for="mega-bio">Observaciones</label>
+                                            <textarea class="form-control input-lg" id="mega-bio" name="mega-bio" rows="8" placeholder="Ingrese alguna observación adicional acerca del bungalow"></textarea>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-daterange1">Rango de fechas para mantenimiento/próximamente/detenido</label>
                                             <div class="col-md-6">
                                                 <div class="input-daterange input-group" data-date-format="mm/dd/yyyy">
                                                     <input class="form-control" type="text" id="example-daterange1" name="example-daterange1" placeholder="Desde">
@@ -863,139 +936,26 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="example-select">Seleccione una sede</label>
-                                            <div class="col-sm-6">
-                                                <select class="form-control" id="example-select" name="example-select" size="1">
-                                                    <option value="0">Todas las sedes</option>
-                                                    <option value="1">Sede principal</option>
-                                                    <option value="2">Sede #1</option>
-                                                    <option value="3">Sede #2</option>
-                                                    <option value="4">Sede #3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-lg-8 col-lg-offset-4">
-                                            <button class="btn btn-sm btn-primary" type="submit">Buscar</button>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
-
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                        <a href="./bungalows.html"><button class="btn btn-danger" type="button"><i class="fa fa-times push-5-r"></i> Cancelar</button></a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a href="./bungalows.html"><button class="btn btn-success" type="button"><i class="fa fa-check push-5-r"></i> Editar</button></a>
+                                    </div>                                    
+                                </div>
                             </form>
                         </div>
                     </div>
-                    <div class="block">
-                        <!--<div class="block-header">
-                            <h3 class="block-title">Simple Table <small>Full</small></h3>
-                        </div>-->
-
-                        <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-bordered table-striped js-dataTable-simple">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center"></th>
-                                        <th >Sede</th>
-                                        <th>Bungalow</th>
-                                        <th class="hidden-xs">Capacidad</th>
-                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
-                                        <th class="text-center" style="width: 10%;">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 101</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Ocupado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 102</td>
-                                        <td class="hidden-xs">4 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="font-w600">Sede Principal</td>
-                                        <td class="font-w600">Bungalow 103</td>
-                                        <td class="hidden-xs">6 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="font-w600">Sede #1</td>
-                                        <td class="font-w600">Bungalow 104</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">5</td>
-                                        <td class="font-w600">Sede #2</td>
-                                        <td class="font-w600">Bungalow 105</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- END Simple Table Full -->
+                    <!-- END Mega Form -->
                 </div>
-                <!-- END Page Content -->
+                
+                
             </main>
             <!-- END Main Container -->
-
-
-            <!-- HASTA AQUÍ -->
 
 
             <!-- Footer -->
@@ -1009,49 +969,7 @@
             </footer>
             <!-- END Footer -->
         </div>
-        <!-- END Page Container -->
-
-        <!-- Apps Modal -->
-        <!-- Opens from the button in the header
-        <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-sm modal-dialog modal-dialog-top">
-                <div class="modal-content">
-                    <!-- Apps Block
-                    <div class="block block-themed block-transparent">
-                        <div class="block-header bg-primary-dark">
-                            <ul class="block-options">
-                                <li>
-                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                                </li>
-                            </ul>
-                            <h3 class="block-title">Apps</h3>
-                        </div>
-                        <div class="block-content">
-                            <div class="row text-center">
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="index.html">
-                                        <div class="block-content text-white bg-default">
-                                            <i class="si si-speedometer fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Backend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="frontend_home.html">
-                                        <div class="block-content text-white bg-modern">
-                                            <i class="si si-rocket fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Frontend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END Apps Block
-                </div>
-            </div>
-        </div>
-        <!-- END Apps Modal -->
+        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>

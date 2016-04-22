@@ -818,7 +818,6 @@
 
             <!-- Main Container -->
             <main id="main-container">
-                <!-- Page Header -->
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
@@ -831,13 +830,13 @@
                     <div class="row items-push">
                         <div class="col-sm-7">
                             <h1 class="page-heading">
-                                Bungalows <small>Lista completa de bungalows</small>
+                                Ambientes <small>Lista completa de ambientes</small>
                             </h1>
                         </div>
                         <div class="col-sm-5 text-right hidden-xs">
                             <ol class="breadcrumb push-10-t">
-                                <li>Bungalows</li>
-                                <li><a class="link-effect" href="">Lista de bungalows</a></li>
+                                <li>Ambientes</li>
+                                <li><a class="link-effect" href="">Lista de ambientes</a></li>
                             </ol>
                         </div>
                     </div>
@@ -848,62 +847,17 @@
                 <div class="content">
                     <!-- Simple Table Full -->
                     <div class="block">
-                        <div class="block-content">
-                            <form class="form" action="base_forms_pickers_more.html" method="post" onsubmit="return false;">
-                                <div class="row">
-                                    <div class="col-lg-6">
-
-                                        <div class="form-group">
-                                            <label class="col-xs-12 control-label" for="example-daterange1">Rango de fechas</label>
-                                            <div class="col-md-6">
-                                                <div class="input-daterange input-group" data-date-format="mm/dd/yyyy">
-                                                    <input class="form-control" type="text" id="example-daterange1" name="example-daterange1" placeholder="Desde">
-                                                    <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
-                                                    <input class="form-control" type="text" id="example-daterange2" name="example-daterange2" placeholder="hasta">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="example-select">Seleccione una sede</label>
-                                            <div class="col-sm-6">
-                                                <select class="form-control" id="example-select" name="example-select" size="1">
-                                                    <option value="0">Todas las sedes</option>
-                                                    <option value="1">Sede principal</option>
-                                                    <option value="2">Sede #1</option>
-                                                    <option value="3">Sede #2</option>
-                                                    <option value="4">Sede #3</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-lg-8 col-lg-offset-4">
-                                            <button class="btn btn-sm btn-primary" type="submit">Buscar</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
-                    <div class="block">
                         <!--<div class="block-header">
                             <h3 class="block-title">Simple Table <small>Full</small></h3>
                         </div>-->
-
                         <div class="block-content">
                             <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
                             <table class="table table-bordered table-striped js-dataTable-simple">
                                 <thead>
                                     <tr>
                                         <th class="text-center"></th>
-                                        <th >Sede</th>
-                                        <th>Bungalow</th>
-                                        <th class="hidden-xs">Capacidad</th>
+                                        <th class="font-w600">Sede</th>
+                                        <th class="hidden-xs">Dirección</th>
                                         <th class="hidden-xs" style="width: 15%;">Estado</th>
                                         <th class="text-center" style="width: 10%;">Acciones</th>
                                     </tr>
@@ -911,7 +865,6 @@
                                 <tbody>
                                     <tr>
                                         <td class="text-center">1</td>
-                                        <td class="font-w600">Sede Principal</td>
                                         <td class="font-w600">Bungalow 101</td>
                                         <td class="hidden-xs">4 personas</td>
                                         <td class="hidden-xs">
@@ -919,14 +872,13 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <a href="./EditEnviroments.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Ambiente"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">2</td>
-                                        <td class="font-w600">Sede Principal</td>
                                         <td class="font-w600">Bungalow 102</td>
                                         <td class="hidden-xs">4 personas</td>
                                         <td class="hidden-xs">
@@ -934,14 +886,13 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <a href="./EditEnviroments.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Ambiente"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">3</td>
-                                        <td class="font-w600">Sede Principal</td>
                                         <td class="font-w600">Bungalow 103</td>
                                         <td class="hidden-xs">6 personas</td>
                                         <td class="hidden-xs">
@@ -949,14 +900,13 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <a href="./EditEnviroments.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Ambiente"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="text-center">4</td>
-                                        <td class="font-w600">Sede #1</td>
                                         <td class="font-w600">Bungalow 104</td>
                                         <td class="hidden-xs">3 personas</td>
                                         <td class="hidden-xs">
@@ -964,38 +914,21 @@
                                         </td>
                                         <td class="text-center">
                                             <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
+                                                <a href="./EditEnviroments.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Ambiente"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-center">5</td>
-                                        <td class="font-w600">Sede #2</td>
-                                        <td class="font-w600">Bungalow 105</td>
-                                        <td class="hidden-xs">3 personas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>                                    
                                 </tbody>
                             </table>
                         </div>
                     </div>
                     <!-- END Simple Table Full -->
                 </div>
-                <!-- END Page Content -->
+                
+                
             </main>
             <!-- END Main Container -->
-
-
-            <!-- HASTA AQUÍ -->
 
 
             <!-- Footer -->
@@ -1009,49 +942,7 @@
             </footer>
             <!-- END Footer -->
         </div>
-        <!-- END Page Container -->
-
-        <!-- Apps Modal -->
-        <!-- Opens from the button in the header
-        <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-sm modal-dialog modal-dialog-top">
-                <div class="modal-content">
-                    <!-- Apps Block
-                    <div class="block block-themed block-transparent">
-                        <div class="block-header bg-primary-dark">
-                            <ul class="block-options">
-                                <li>
-                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                                </li>
-                            </ul>
-                            <h3 class="block-title">Apps</h3>
-                        </div>
-                        <div class="block-content">
-                            <div class="row text-center">
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="index.html">
-                                        <div class="block-content text-white bg-default">
-                                            <i class="si si-speedometer fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Backend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="frontend_home.html">
-                                        <div class="block-content text-white bg-modern">
-                                            <i class="si si-rocket fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Frontend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END Apps Block
-                </div>
-            </div>
-        </div>
-        <!-- END Apps Modal -->
+        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>
