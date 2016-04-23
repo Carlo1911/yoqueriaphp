@@ -818,120 +818,82 @@
 
             <!-- Main Container -->
             <main id="main-container">
-                <!-- Page Header -->
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
                         <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrador</h2>
                     </div>
                 </div>
-
-
-                <div class="content bg-gray-lighter">
-                    <div class="row items-push">
-                        <div class="col-sm-7">
-                            <h1 class="page-heading">
-                                Franquicias <small>Lista completa de franquicias</small>
-                            </h1>
-                        </div>
-                        <div class="col-sm-5 text-right hidden-xs">
-                            <ol class="breadcrumb push-10-t">
-                                <li>Franquicias</li>
-                                <li><a class="link-effect" href="">Lista de franquicias</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
                 <!-- END Page Header -->
 
                 <!-- Page Content -->
                 <div class="content">
-                    <!-- Simple Table Full -->
                     <div class="block">
-                        <!--<div class="block-header">
-                            <h3 class="block-title">Simple Table <small>Full</small></h3>
-                        </div>-->
-                        <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-bordered table-striped js-dataTable-simple">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">#</th>
-                                        <th class="font-w600">Sede</th>
-                                        <th class="font-w600">Nombre</th>
-                                        <th class="hidden-xs">Referencia</th>
-                                        <th class="hidden-xs" style="width: 15%;">Estado</th>
-                                        <th class="text-center" style="width: 10%;">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="font-w600">Sede principal</td>
-                                        <td class="font-w600">Franquicia #1</td>
-                                        <td class="hidden-xs">Al lado de la piscina</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Ocupado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Franchise.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar franquicia"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar franquicia" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="font-w600">Sede principal</td>
-                                        <td class="font-w600">Franquicia #2</td>
-                                        <td class="hidden-xs">Detrás de los bungalows</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Reservado</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Franchise.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar franquicia"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar franquicia" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">3</td>
-                                        <td class="font-w600">Sede principal</td>
-                                        <td class="font-w600">Franquicia #3</td>
-                                        <td class="hidden-xs">Detrás de las canchas</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Franchise.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar franquicia"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar franquicia" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">4</td>
-                                        <td class="font-w600">Sede #1</td>
-                                        <td class="font-w600">Franquicia #4</td>
-                                        <td class="hidden-xs">Al lado de la cancha de basket</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-success">Disponible</span>
-                                        </td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Franchise.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar franquicia"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" title="Eliminar franquicia" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i></button>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="block-header">
+                            <ul class="block-options">
+                                <li>
+                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                                </li>
+                            </ul>
+                            <h3 class="block-title">Tipo de Evento</h3>
                         </div>
+
+                        <!-- Block v2 -->
+                        <div class="block-content">
+                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <div class="col-xs-6">
+                                                <label for="mega-firstname">Codigo</label>
+                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Enter your firstname.." value="001" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <label for="mega-firstname">Nombre</label>
+                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Enter your firstname.." value="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <div class="col-xs-12">
+                                                <label for="mega-firstname">Descripcion</label>
+                                                <input class="form-control input-lg" type="text" id="mega-firstname" name="mega-firstname" placeholder="Enter your firstname.." value="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-3">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#createModal"><i class="fa fa-check push-5-r"></i> Crear</button>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="./Concessionaire.html"><button class="btn btn-warning" type="submit"><i class="fa fa-remove push-5-r"></i> Cancelar</button></a>
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <a href="./Concessionaire.html"><button class="btn btn-danger" type="submit"><i class="fa fa-arrow-left push-5-r"></i> Regresar</button></a>
+                                    </div>
+                                    <div class="col-xs-3">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- END Block v2 -->
+
+
                     </div>
-                    <!-- END Simple Table Full -->
                 </div>
-                <!-- END Page Content -->
             </main>
             <!-- END Main Container -->
 
@@ -949,50 +911,7 @@
                 </div>
             </footer>
             <!-- END Footer -->
-        </div>
-        <!-- END Page Container -->
-
-        <!-- Apps Modal -->
-        <!-- Opens from the button in the header
-        <div class="modal fade" id="apps-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-sm modal-dialog modal-dialog-top">
-                <div class="modal-content">
-                    <!-- Apps Block
-                    <div class="block block-themed block-transparent">
-                        <div class="block-header bg-primary-dark">
-                            <ul class="block-options">
-                                <li>
-                                    <button data-dismiss="modal" type="button"><i class="si si-close"></i></button>
-                                </li>
-                            </ul>
-                            <h3 class="block-title">Apps</h3>
-                        </div>
-                        <div class="block-content">
-                            <div class="row text-center">
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="index.html">
-                                        <div class="block-content text-white bg-default">
-                                            <i class="si si-speedometer fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Backend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-xs-6">
-                                    <a class="block block-rounded" href="frontend_home.html">
-                                        <div class="block-content text-white bg-modern">
-                                            <i class="si si-rocket fa-2x"></i>
-                                            <div class="font-w600 push-15-t push-15">Frontend</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END Apps Block
-                </div>
-            </div>
-        </div>
-        <!-- END Apps Modal -->
+        </div>        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>
