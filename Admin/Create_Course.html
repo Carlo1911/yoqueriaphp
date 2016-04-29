@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
     <head>
@@ -707,100 +707,102 @@
 
             <!-- Main Container -->
             <main id="main-container">
-                
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
-                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Usuario</h2>
-                    </div>
-                </div>
-
-
-                <div class="content bg-gray-lighter">
-                    <div class="row items-push">
-                        <div class="col-sm-7">
-                            <h1 class="page-heading">
-                                Reserva de Canchas<small></small>
-                            </h1>
-                        </div>
-                        <div class="col-sm-5 text-right hidden-xs">
-                            <ol class="breadcrumb push-10-t">
-                                <li>Reserva de Canchas</li>
-                                <li><a class="link-effect" href="">Lista de Reservas</a></li>
-                            </ol>
-                        </div>
+                        <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrador</h2>
                     </div>
                 </div>
                 <!-- END Page Header -->
-
-                <!-- Page Content -->
                 <div class="content">
-                    <!-- Simple Table Full -->
                     <div class="block">
                         <div class="block-header">
                             <ul class="block-options">
                                 <li>
-                                    <button class="btn btn-sm btn-primary">Nueva Reserva</button>
-                                </li>
-                                <li>
                                     <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                 </li>
                             </ul>
-                            <h1 class="block-title">Lista de Reservas</h1>
+                            <h3 class="block-title">REGISTRO DE Curso</h3>
                         </div>
-                        <!--<div class="block-header">
-                            <h3 class="block-title">Simple Table <small>Full</small></h3>
-                        </div>-->
                         <div class="block-content">
-                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
-                            <table class="table table-bordered table-striped js-dataTable-simple">
-                                <thead>
-                                    <tr>
-                                        <th class="text-center" style="width: 5%;"></th>
-                                        <th class="hidden-xs" style="width: 30%;">Nombre</th>
-                                        <th class="hidden-xs" style="width: 15%;">Tipo</th>
-                                        <th class="hidden-xs" style="width: 15%;">Fecha</th>
-                                        <th class="text-center" style="width: 10%;">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">1</td>
-                                        <td class="font-w600">Reserva #1</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-danger">Futbol</span>
-                                        </td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Court_Res.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Reserva"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Cancelar Reserva"><i class="fa fa-times"></i></button>
+                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="">Código</label>
+                                            <div class="col-md-6">
+                                                
+                                                <input class="form-control input-md" type="text" id="" name="" >
+                                            </div>                                            
+                                        </div>  
+                                    </div>
+                                	<div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="">Asistencia</label>
+                                            <div class="col-md-6">
+                                                
+                                                <input class="form-control input-md" type="text" id="" name="" >
+                                            </div>                                            
+                                        </div>  
+                                    </div>
+                                                             
+                                </div>
+                                <div class="row">
+                                	                                    <div class="col-lg-6">
+                                        
+                                        <div class="form-group">
+                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Inicio</label>
+                                            <div class="col-md-6">
+                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
+                                                            <span class="input-group-addon">
+                                                                <span class="fa fa-calendar"></span>
+                                                            </span>
+                                                        </div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">2</td>
-                                        <td class="font-w600">Reserva #2</td>
-                                        <td class="hidden-xs">
-                                            <span class="label label-warning">Tennis</span>
-                                        </td>
-                                        <td class="hidden-xs">10/09/2012</td>
-                                        <td class="text-center">
-                                            <div class="btn-group">
-                                                <a href="./Edit_Court_Res.html"><button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Reserva"><i class="fa fa-pencil"></i></button></a>
-                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Cancelar Reserva"><i class="fa fa-times"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Fin</label>
+                                            <div class="col-md-6">
+                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
+                                                            <span class="input-group-addon">
+                                                                <span class="fa fa-calendar"></span>
+                                                            </span>
+                                                        </div>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="mega-firstname">Precio</label>
+                                            <div class="col-md-6">                                                
+                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese el precio del evento..">
+                                            </div>                                            
+                                        </div>  
+                                    </div>
+                                </div>                                
+
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-warning" type="submit"><i class="fa fa-check push-5-r"></i> Crear Evento</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+
+
                     </div>
-                    <!-- END Simple Table Full -->
                 </div>
-                
             </main>
             <!-- END Main Container -->
+
+
+            <!-- HASTA AQUÍ -->
 
 
             <!-- Footer -->
@@ -813,8 +815,7 @@
                 </div>
             </footer>
             <!-- END Footer -->
-        </div>
-        
+        </div>        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>
