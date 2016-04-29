@@ -707,102 +707,170 @@
 
             <!-- Main Container -->
             <main id="main-container">
+                
+                <!-- Page Header -->
                 <div class="content bg-image overflow-hidden" style="background-image: url('assets/img/photos/photo3@2x.jpg');">
                     <div class="push-50-t push-15">
                         <h1 class="h2 text-white animated zoomIn">Dashboard</h1>
                         <h2 class="h5 text-white-op animated zoomIn">Bienvenido Administrador</h2>
                     </div>
                 </div>
-                <!-- END Page Header -->
-                <div class="content">
-                    <div class="block">
-                        <div class="block-header">
-                            <ul class="block-options">
-                                <li>
-                                    <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
-                                </li>
-                            </ul>
-                            <h3 class="block-title">REGISTRO DE EVENTOS</h3>
+
+
+                <div class="content bg-gray-lighter">
+                    <div class="row items-push">
+                        <div class="col-sm-7">
+                            <h1 class="page-heading">
+                                Cursos <small>Lista completa de Cursos</small>
+                            </h1>
                         </div>
-                        <div class="block-content">
-                            <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="">Código</label>
-                                            <div class="col-md-6">
-                                                
-                                                <input class="form-control input-md" type="text" id="" name="" >
-                                            </div>                                            
-                                        </div>  
-                                    </div>
-                                	<div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="">Asistencia</label>
-                                            <div class="col-md-6">
-                                                
-                                                <input class="form-control input-md" type="text" id="" name="" >
-                                            </div>                                            
-                                        </div>  
-                                    </div>
-                                                             
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        
-                                        <div class="form-group">
-                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Inicio</label>
-                                            <div class="col-md-6">
-                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
-                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
-                                                            <span class="input-group-addon">
-                                                                <span class="fa fa-calendar"></span>
-                                                            </span>
-                                                        </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Fin</label>
-                                            <div class="col-md-6">
-                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
-                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
-                                                            <span class="input-group-addon">
-                                                                <span class="fa fa-calendar"></span>
-                                                            </span>
-                                                        </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="mega-firstname">Precio</label>
-                                            <div class="col-md-6">                                                
-                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese el precio del evento..">
-                                            </div>                                            
-                                        </div>  
-                                    </div>
-                                </div>                                
-
-                                <div class="form-group">
-                                    <div class="col-xs-12">
-                                        <button class="btn btn-warning" type="submit"><i class="fa fa-check push-5-r"></i> Guardar Evento</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>                        
-
-
+                        <div class="col-sm-5 text-right hidden-xs">
+                            <ol class="breadcrumb push-10-t">
+                                <li>Cursos</li>
+                                <li><a class="link-effect" href="">Lista de Cursos</a></li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
+                <!-- END Page Header -->
+
+                <!-- Page Content -->
+                <div class="content">
+                    <!-- Simple Table Full -->
+                    <div class="block">
+                        <div class="block-content">
+                            <form class="form" action="base_forms_pickers_more.html" method="post" onsubmit="return false;">
+                                <div class="row">
+                                    <div class="col-lg-6">
+
+                                        <div class="form-group">
+                                            <label class="col-xs-12 control-label" for="example-daterange1">Fecha</label>
+                                            <div class="col-md-6">
+                                                <div class="input-daterange input-group" data-date-format="mm/dd/yyyy">
+                                                    <input class="form-control" type="text" id="example-daterange1" name="example-daterange1" placeholder="Fecha">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="example-select">Seleccione una sede</label>
+                                            <div class="col-sm-6">
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="0">Todas las sedes</option>
+                                                    <option value="1">Sede principal</option>
+                                                    <option value="2">Sede #1</option>
+                                                    <option value="3">Sede #2</option>
+                                                    <option value="4">Sede #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-8 col-lg-offset-4">
+                                            <button class="btn btn-sm btn-primary" type="submit">Buscar</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="block">
+                        <!--<div class="block-header">
+                            <h3 class="block-title">Simple Table <small>Full</small></h3>
+                        </div>-->
+
+                        <div class="block-content">
+                            <!-- DataTables init on table by adding .js-dataTable-full class, functionality initialized in js/pages/base_tables_datatables.js -->
+                            <table class="table table-bordered table-striped js-dataTable-simple">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center"></th>
+                                        <th >Sede</th>
+                                        <th>Curso</th>
+                                        <th class="hidden-xs">Capacidad</th>
+                                        <th class="hidden-xs" style="width: 15%;">Precio</th>
+                                        <th class="text-center" style="width: 10%;">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="font-w600">Sede Principal</td>
+                                        <td class="font-w600">Curso 1</td>
+                                        <td class="hidden-xs">4 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-danger">S/. 30</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Edit_Course.html">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Deshabilitar Bungalow"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="font-w600">Sede Principal</td>
+                                        <td class="font-w600">Curso 2</td>
+                                        <td class="hidden-xs">9 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-warning">S/. 20</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Edit_Course.html">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Deshabilitar Bungalow"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td class="font-w600">Sede Principal</td>
+                                        <td class="font-w600">Curso 3</td>
+                                        <td class="hidden-xs">6 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">S/. 30</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Edit_Course.html">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Deshabilitar Bungalow"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td class="font-w600">Sede #1</td>
+                                        <td class="font-w600">Curso 4</td>
+                                        <td class="hidden-xs">3 personas</td>
+                                        <td class="hidden-xs">
+                                            <span class="label label-success">S/. 15</span>
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="btn-group">
+                                                <a href="Edit_Course.html">
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Editar Bungalow"><i class="fa fa-pencil"></i></button></a>
+                                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Deshabilitar Bungalow"><i class="fa fa-times"></i></button>
+                                            </div>
+                                        </td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- END Simple Table Full -->
+                </div>
+                
             </main>
             <!-- END Main Container -->
-
-
-            <!-- HASTA AQUÍ -->
 
 
             <!-- Footer -->
@@ -815,7 +883,8 @@
                 </div>
             </footer>
             <!-- END Footer -->
-        </div>        
+        </div>
+        
 
         <!-- OneUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock, Appear, CountTo, Placeholder, Cookie and App.js -->
         <script src="assets/js/core/jquery.min.js"></script>

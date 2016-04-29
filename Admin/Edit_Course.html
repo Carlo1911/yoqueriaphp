@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
     <head>
@@ -722,39 +722,46 @@
                                     <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                                 </li>
                             </ul>
-                            <h3 class="block-title">REGISTRO DE EVENTOS</h3>
+                            <h3 class="block-title">REGISTRO DE Curso</h3>
                         </div>
                         <div class="block-content">
                             <form class="form-horizontal push-10-t push-10" action="base_forms_premade.html" method="post" onsubmit="return false;">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label class="col-xs-12" for="">Código</label>
+                                        <label class="col-xs-12" for="example-select">Seleccione una sede</label>
                                             <div class="col-md-6">
-                                                
-                                                <input class="form-control input-md" type="text" id="" name="" >
-                                            </div>                                            
-                                        </div>  
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="0">Sede principal</option>
+                                                    <option value="1">Sede #1</option>
+                                                    <option value="2">Sede #2</option>
+                                                    <option value="3">Sede #3</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                	<div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12" for="">Asistencia</label>
-                                            <div class="col-md-6">
-                                                
-                                                <input class="form-control input-md" type="text" id="" name="" >
-                                            </div>                                            
-                                        </div>  
-                                    </div>
-                                                             
-                                </div>
-                                <div class="row">
                                     <div class="col-lg-6">
-                                        
                                         <div class="form-group">
-                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Inicio</label>
+                                            <label class="col-xs-12" for="example-select">Seleccione un ambiente</label>
                                             <div class="col-md-6">
-                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
-                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="0">Ambiente #1</option>
+                                                    <option value="1">Ambiente #2</option>
+                                                    <option value="2">Ambiente #3</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-lg-6">                                     
+                                        <div class="form-group">
+                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha y hora</label>
+                                            <div class="col-md-6">
+                                                <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
+                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date.." value="10/03/2016 13:00">
                                                             <span class="input-group-addon">
                                                                 <span class="fa fa-calendar"></span>
                                                             </span>
@@ -762,34 +769,52 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-6">
-                                        <div class="form-group">
-                                            <label class="col-xs-12 " for="example-datetimepicker3">Fecha de Fin</label>
-                                            <div class="col-md-6">
-                                                        <div class="js-datetimepicker input-group date" data-show-today-button="true" data-show-clear="true" data-show-close="true">
-                                                            <input class="form-control" type="text" id="example-datetimepicker3" name="example-datetimepicker3" placeholder="Choose a date..">
-                                                            <span class="input-group-addon">
-                                                                <span class="fa fa-calendar"></span>
-                                                            </span>
-                                                        </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label class="col-xs-12" for="mega-firstname">Precio</label>
                                             <div class="col-md-6">                                                
-                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese el precio del evento..">
+                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese el precio del curso.." value="S/. 20">
                                             </div>                                            
                                         </div>  
                                     </div>
-                                </div>                                
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="mega-firstname">Descripción</label>
+                                            <div class="col-md-6">                                                
+                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese la descripción del curso.." value="Descripción del curso.">
+                                            </div>                                            
+                                        </div>  
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label class="col-xs-12" for="example-select">Seleccione la duración</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="example-select" name="example-select" size="1">
+                                                    <option value="0"> 1 día</option>
+                                                    <option value="1">1 semana</option>
+                                                    <option value="2">2 semanas</option>               
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>    
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="col-xs-12" for="mega-firstname">Capacidad</label>
+                                            <div class="col-md-6">                                                
+                                                <input class="form-control input-md" type="text" id="" name="" placeholder="Ingrese la capacidad de personas.." value="10">
+                                            </div>                                            
+                                        </div>  
+                                    </div>
+                                </div>                            
 
                                 <div class="form-group">
                                     <div class="col-xs-12">
-                                        <button class="btn btn-warning" type="submit"><i class="fa fa-check push-5-r"></i> Guardar Evento</button>
+                                        <button class="btn btn-warning" type="submit"><i class="fa fa-check push-5-r"></i> Crear Curso</button>
                                     </div>
                                 </div>
                             </div>
